@@ -35,6 +35,7 @@ export default function ChatPage() {
 
     // ./Sua lógica vai aqui
     return (
+             
         <Box
             styleSheet={{
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -80,7 +81,7 @@ export default function ChatPage() {
                      //     </li>
                       //)
                    // })}
-
+                        
                     <Box
                         as="form"
                         styleSheet={{
@@ -111,6 +112,21 @@ export default function ChatPage() {
                                 color: appConfig.theme.colors.neutrals[200],
                             }}
                         />
+                        <Box>
+                            <Button
+                                variant='tertiary'
+                                colorVariant='neutral'
+                                label='Enviar'
+                                onChange={(event) => {
+                                    const valor = event.target.value
+                                    setMensagem(valor);
+                                }}
+                                onClick={(event) => {
+                                    event.preventDefault();
+                                    handleNovaMensagem(mensagem)
+                                }}
+                            />
+                        </Box>
                     </Box>
                     }
                 </Box>
@@ -143,7 +159,7 @@ function MessageList(props) {
         <Box
             tag="ul"
             styleSheet={{
-                overflow: 'scroll',
+                overflow: 'auto',
                 display: 'flex',
                 flexDirection: 'column-reverse',
                 flex: 1,
@@ -157,6 +173,7 @@ function MessageList(props) {
                 key={mensagem.id}
                 tag="li"
                 styleSheet={{
+                    wordBreak: 'break-word',
                     borderRadius: '5px',
                     padding: '6px',
                     marginBottom: '12px',
