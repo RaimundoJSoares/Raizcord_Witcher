@@ -18,6 +18,10 @@ export default function ChatPage() {
     ]);
     setMensagem('')
   }
+  const deletarMensagem = (id)=> {
+    let removerlista = listademensagens.filter(object => object.id !== id)
+    setListademensagens(removerlista)
+  }
 
     // Sua lógica vai 
     /* 
@@ -40,7 +44,7 @@ export default function ChatPage() {
             styleSheet={{
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 backgroundColor: appConfig.theme.colors.primary[500],
-                backgroundImage: `url(https://occ-0-1723-1722.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABVlzKD23OxpLNPSQfpD09vfHmkIAQNd_c4Nyeiy0w9bsnsmk-Q_hMrHz4hnHMlAqviLxw3a0CqB30ztmXLEWhfExFO3X.jpg?r=93a)`,
+                backgroundImage: `url(https://cdn.discordapp.com/attachments/740217114417430598/936057857340768306/images_2_18.jpeg)`,
                 backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundBlendMode: 'multiply',
                 color: appConfig.theme.colors.neutrals['000']
             }}
@@ -73,7 +77,7 @@ export default function ChatPage() {
                     }}
                 >
 
-                    <MessageList mensagens = {listademensagens} /> 
+                    <MessageList mensagens = {listademensagens} deletarMensagem= {deletarMensagem} /> 
                     {//listademensagens.map(() => {console.log(mensagematual)
                       //return(
                       //  <li key={mensagematual.id}>
@@ -154,6 +158,7 @@ function Header() {
 }
 
 function MessageList(props) {
+    const deletarMensagem = props.deletarMensagem;
     console.log('MessageList', props);
     return (
         <Box
@@ -197,6 +202,18 @@ function MessageList(props) {
                         }}
                         src={`https://github.com/raimundojSoares.png`}
                     />
+
+                                <Button
+                                label="x"
+                                colorVariant='neutral'
+                                styleSheet={{
+                                    position: 'absolute',
+                                    right: '20px',
+                                }}
+                                onClick={() => {
+                                    deletarMensagem(mensagem.id);
+                                }}
+                            />
                     <Text tag="strong">
                     {mensagem.de}
                     </Text>
