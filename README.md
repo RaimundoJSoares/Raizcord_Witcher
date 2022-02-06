@@ -5,7 +5,7 @@ Home
 Chat
 ![image](https://user-images.githubusercontent.com/61881055/151293763-54a3079e-1d50-45ef-8488-3622ab7eb6a6.png)
 
-##Tecnologias <br>
+## Tecnologias <br>
 Next JS <br>
 Rotes <br>
 JavaScript <br>
