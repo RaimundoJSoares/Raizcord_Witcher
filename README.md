@@ -8,7 +8,7 @@ Chat
 
 ## Tecnologias <br>
 Next JS <br>
-Rotes <br>
+API Rotes <br>
 JavaScript <br>
 Css3 <br>
 HTML5 <br>
