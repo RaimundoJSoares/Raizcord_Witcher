@@ -5,5 +5,10 @@ Home
 Chat
 ![image](https://user-images.githubusercontent.com/61881055/151293763-54a3079e-1d50-45ef-8488-3622ab7eb6a6.png)
 
-
-A version of Discord using NextJS, JavaScript , JSX
+##Tecnologias <br>
+Next JS <br>
+Rotes <br>
+JavaScript <br>
+Css3 <br>
+HTML5 <br>
+Vercel 
