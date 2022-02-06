@@ -1,4 +1,5 @@
 # Raizcord_Witcher
+### Uma versão alternativa do Discord usando NextJS , onde o usuário consegue usar através de uma conta do GitHub
 Home
 ![imagem_2022-01-25_120214](https://user-images.githubusercontent.com/61881055/151012815-71bb8208-b378-406f-a5ed-07515049d463.png)
 
